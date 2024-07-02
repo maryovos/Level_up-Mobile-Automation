@@ -21,15 +21,21 @@ Mobile.startApplication('C:\\Users\\1556\\Downloads\\Training IDX\\app-debug.apk
 
 Mobile.waitForElementPresent(findTestObject('button_Menu'), 40)
 
+Mobile.takeScreenshotAsCheckpoint('Before Logout', FailureHandling.STOP_ON_FAILURE)
+
 Mobile.tap(findTestObject('button_Menu'), 40)
 
 Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.takeScreenshotAsCheckpoint('Before Click Button Logout', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('button_logout'), 40)
 
 Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.waitForElementPresent(findTestObject('button_Login'), 40)
+
+Mobile.takeScreenshotAsCheckpoint('Before Click Button Login', FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('button_Login'), 40)
 
